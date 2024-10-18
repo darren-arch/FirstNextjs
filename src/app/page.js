@@ -19,13 +19,19 @@ export default function Home() {
 
   return (
     <div>
+      <div className="artboard-demo">
       <Header title="Develop. Preview. Ship." />
-      <ul>
+      </div>
+      <div>
         {names.map((name) => (
-          <li key={name}>{name}</li>
+          <span className='badge badge-neutral' key={name}>{name}</span>
         ))}
-      </ul>
-        <LikeButton />
+      </div>
+
+
+        <button className='btn'>
+          <LikeButton />
+        </button>
     </div>
   )
 }
