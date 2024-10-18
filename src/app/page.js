@@ -1,19 +1,19 @@
-'use client' // this needs to be done depending on where I need things rendered
+//'use client' // this needs to be done depending on where I need things rendered
 
 import Image from "next/image";
 import React from 'react'; // this needs to be imported to use React elements
-
+import LikeButton from './like-button'
 
 
 
 export default function Home() {
   const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"]
  
-  const [likes, setLikes] = React.useState(0)
+  //const [likes, setLikes] = React.useState(0)
 
-  function handleClick() {
+  /*function handleClick() {
     setLikes(likes + 1)
-  }
+  }*/
 
   // temporary comment
 
@@ -25,8 +25,7 @@ export default function Home() {
           <li key={name}>{name}</li>
         ))}
       </ul>
-
-      <button onClick={handleClick}>Like ({likes})</button>
+        <LikeButton />
     </div>
   )
 }
